@@ -1,0 +1,34 @@
+<script>
+    //Ejercicio 2 - Ordenar un Arreglo
+    let inicio=["unacadena",3,9,1,10,500,1,10,true]; 
+    //let inicio=["unacadena",3,9,1,10,500,false,20,"hola",1,10,true];      
+    let arrayNumeros=[];
+    let arrayOrdenado=[]; 
+
+    //Dejar solo los numeros en un array
+    for(let i=0;i<inicio.length;i++){
+        if (typeof inicio[i] === 'number') {
+            arrayNumeros.push(inicio[i]);
+            console.log(inicio[i]);
+        }       
+    }
+
+    let cantidadNumeros=arrayNumeros.length;
+    let mayor=0;
+    let posicionMayor=-1;
+    
+    //Ordenar el array usando un auxiliar
+    for(let j=0;j<cantidadNumeros;j++){        
+        for(let k=0;k<arrayNumeros.length;k++){           
+            if(arrayNumeros[k]>mayor){
+                mayor=arrayNumeros[k];
+                posicionMayor=k;
+            }           
+        }
+        arrayOrdenado.push(mayor);
+        arrayNumeros.splice(posicionMayor,1);
+        mayor=0;
+    }
+    console.log(arrayOrdenado);
+    
+</script>

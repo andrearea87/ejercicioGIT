@@ -1,0 +1,18 @@
+<script>
+    //Ejercicio 1 - Serie de Fibonacci
+    let numeroDeElementos=prompt("Ingrese un numero");
+    if(!isNaN(numeroDeElementos)){
+        let serie1=0;
+        let serie2=1;
+        let serieFibonaci="";
+        for(let i=1;i<=numeroDeElementos;i++){
+            serieFibonaci=serieFibonaci + serie1 +",";
+            suma=serie1+serie2;
+            serie1=serie2;
+            serie2=suma;
+        }
+        console.log(serieFibonaci);
+    }else{
+        alert("El dato ingresado no es un numero");
+    }
+</script>
